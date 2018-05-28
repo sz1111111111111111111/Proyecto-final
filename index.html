@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8" />
+    <title>Proyecto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        h1.titulo{text-align:center
+        }
+        body {
+            background: #B1A7A0;
+            color: #FCF9F4;
+        }
+        main {
+            max-width: 1500px;
+            margin: 30px auto;
+            background: #3F3F3D;
+            padding: 30px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+        }
+        input[name=css-tabs] {
+            display: none;
+        }
+        a {
+            color: #F29A77;
+        }
+        #tabs {
+            padding: 0 0 0 50px;
+            width: calc(100% + 50px);
+            margin-left: -50px;
+            background: #2B2A28;
+            height: 50px;
+            border-bottom: 5px solid #EB4E01;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+        }
+        #tabs::before {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: -100;
+            width: 100%;
+            left: 0;
+            margin-top: 16px;
+            height: 0px;
+            background: #2B2A28;
+            border-bottom: 5px solid #EB4E01;
+        }
+        #tabs::after {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 0;
+            height: 0px;
+            width: 102px;
+            background: #EB4E01;
+            transition: transform 400ms;
+        }
+        #tabs label {
+            position: relative;
+            z-index: 100;
+            display: block;
+            float: left;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-align: center;
+            width: 200px;
+            height: 50px;
+            border-right: 1px dotted #575654;
+            cursor: pointer;
+        }
+        #tabs label:first-child {
+            border-left: 1px dotted #575654;
+            font-size: 16px;
+        }
+        #tabs label::before {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 30px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            filter: invert(40%);
+            margin: 10px auto;
+        }
+
+        #radio1:checked ~ #tabs #tab1::before, #radio2:checked ~ #tabs #tab2::before, #radio3:checked ~ #tabs #tab3::before, #radio4:checked ~ #tabs #tab4::before {
+            filter: invert(100%);
+        }
+        #radio1:checked ~ #tabs::after {
+            transform: translateX(0);
+        }
+        #radio2:checked ~ #tabs::after {
+            transform: translateX(101px);
+        }
+        #radio3:checked ~ #tabs::after {
+            transform: translateX(202px);
+        }
+        #radio4:checked ~ #tabs::after {
+            transform: translateX(303px);
+        }
+        #content {
+            position: relative;
+            height: 30px;
+            color: #000;
+        }
+        #content section {
+            position: absolute;
+            transform: translateY(500px);
+            opacity: 0;
+            transition: transform 500ms, opacity 500ms;
+        }
+        #radio1:checked ~ #content #content1, #radio2:checked ~ #content #content2, #radio3:checked ~ #content #content3, #radio4:checked ~ #content #content4 {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        body,td,th {
+            font-size: 18px;
+            font-family: "Baskerville SemiBold Italic";
+        }
+
+    </style>
+
+</head>
+
+<body style="background-color:#bdaea5">
+<main>
+    <h1 class="titulo">Consecuencias de los sismos</h1>
+    <input id="radio1" type="radio" name="css-tabs" checked>
+    <input id="radio2" type="radio" name="css-tabs">
+    <input id="radio3" type="radio" name="css-tabs">
+    <input id="radio4" type="radio" name="css-tabs">
+    <div id="tabs">
+        <label id="tab1" for="radio1">Mapa</label>
+        <label id="tab2" for="radio2">¿Quienes somos?</label>
+        <label id="tab3" for="radio3">Sismos</label>
+        <label id="tab4" for="radio4">Referencias</label>
+    </div>
+    <div id="content">
+        <section id="content1">
+            <div align=“center”>
+            <br />
+            </div>
+            <iframe width="1250" height="760" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col2+from+1LbyDFMzv7WG6crjMxuGZsnCwMid7--kiybNxZUc_&amp;viz=MAP&amp;h=false&amp;lat=25.864703710558068&amp;lng=-310.4391025390626&amp;t=1&amp;z=2&amp;l=col2&amp;y=2&amp;tmplt=2&amp;hml=GEOCODABLE"></iframe>
+            <br />
+            <br />
+            <br />
+            <br />
+            El mapa muestra los sismos más fuertes (de 8.5 hasta 9.5) ocurridos en el mundo; en el apartado de sismo puedes ver más información de los sismos, si quieres conocer datos básicos puedes darle click a los círculos azules que señalan el epicentro de dichos sismos.
+        </section>
+        <section id="content2">
+            <br />
+            <br />
+            <br />
+            <br />
+            <img src="tics.png" alt="" width="450" height="100"/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="enes.jpg" alt="" width="200" height="100"/>
+            <br/>
+            <br/>
+            Página elaborada por:
+            Donovan Mosheh Ramirez Trejo.
+            <br/>
+            <br/>
+            Alfonso Samael Zavala Sánchez.
+            <br/>
+            <br/>
+            Como proyecto conjunto para las materias de Diseño de la información y Visualización.
+
+
+        </section>
+        <section id="content3">
+            <br />
+            <br />
+            <br />
+            <br />
+            <center><b><H1>JAPON</H1></b></center>
+            <table width="1300" cellspacing="1" cellpadding="3" border="0" bgcolor="#3F3F3D">
+                <tr>
+                    <td><font color="#FFFFFF" face="arial, verdana, helvetica">
+                        <b>Electricidad</b>
+                    </font></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#FFFFFF">
+                        <font face="arial, verdana, helvetica">
+                            Gracias a Tohoku Electric Power (TEP) se supo que mas de 4 millones
+                            de personas en la parte Norte-Este de Japón se quedaron sin electricidad
+                            devido al sismo y al tsunami sucedido después.
+                            La Tokyo Electric Power Company, anuncio que teuvieron que reducir
+                            GW de 40 a 30 debido a que la las mas grandes plantas productoras de
+                            electricidad tuvieron que ser apagadas y otras quedaron dañadas.
+                            <img src="electricidad%20japon.png" align="right" height="100" width="100"/>
+                            <br/>
+                            Para la desgracia de Japón de las 51 plantas nucleares que alimentan a
+                            Japón, se tuvieron que cerrar 11, por lo tanto toda la region de Kanto
+                            se quedó sin electricidad puesto que no habia suficiente para dar.
+                            Debido a tales desafortunados sucesos Sumitomo Metal Industries, JFE Steel
+                            y Nippon Steel decidieron apoyar a la causa conectando sus generadores a la
+                            red de TEPCO para asi distribuirlo al publico.
+                            <br/>
+                            La central nuclear Fukushima 1, tuvo severos daños despues del sismo y que
+                            para la desgracia de todos, fue en la parte de la refrigeracion por lo que este
+                            dio origen una fuga de gas y una fusion nuclear que son completamente toxicas
+                            para todos. Automáticamente se inicio el protocolo de evacuar todas las personas
+                            en un radio de 3km del reactor. Para terminar con la malas noticias el daño
+                            ocacionado al rededor fue de 20km a la redonda, infectando, destruyendo y
+                            matando todo a su paso.
+                        </font>
+                    </td>
+                </tr>
+            </table>
+
+            <hr/>
+
+            <table width="1300" cellspacing="1" cellpadding="3" border="0" bgcolor="#3F3F3D">
+                <tr>
+                    <td><font color="#FFFFFF" face="arial, verdana, helvetica">
+                        <b>Telecomunicaciones</b>
+                    </font></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#FFFFFF">
+                        <font face="arial, verdana, helvetica">
+                            Las telecomunicaciones fueron si dudar alguna, la area mas afectada de todas
+                            puesto que la unica forma de poderse comunicar era por internet y en algunos
+                            lugares, los servicios telefonicos completamente destruidos e inundados, los
+                            aeropuertos donde algunas cartas y paquetes, fueron cerrados, embarcaciones
+                            completamente cerradas y algunas destruidas. Una lamentable situación.
+                            Aqui un enlace para poder escuchar el inicio del sismo: <a href="http://ds.iris.edu/ds/nodes/dmc/tools/event/3279407">http://ds.iris.edu/ds/nodes/dmc/tools/event/3279407</a>
+                        </font>
+                    </td>
+                </tr>
+            </table>
+            <hr/>
+            <center><b><h2>SUMATRA</h2></b></center>
+            <table width="1300" cellspacing="1" cellpadding="3" border="0" bgcolor="#3F3F3D">
+                <tr>
+                    <td><font color="#FFFFFF" face="arial, verdana, helvetica">
+                        <b>Sismo 1</b>
+                    </font></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#FFFFFF">
+                        <font face="arial, verdana, helvetica">
+                            Yakarta, 12 de septiembre. Un sismo de 8.2 grados en la escala de Ritcher sacudió hoy la región de Sumatra, con saldo preliminar de nueve muertos, cientos de heridos y un ligero tsunami que no dejó víctimas pero que provocó pánico en zonas costeras del sudeste asiático al evocar el de diciembre de 2004, que dejó casi un cuarto de millón de muertos.
+
+                            El gobierno indonesio emitió dos alertas de tsunami, pero luego de producirse un maremoto muy tenue, y otro sismo de 6.6 grados, levantó la segunda alerta.
+
+                            Sin embargo, países del este de África con costas en el océano Índico como Kenia, Tanzania y Mauritania, así como las islas de Zanzíbar y Pomba, lanzaron alertas de tsunami por temor a que olas gigantes golpeen sus playas. También Bangladesh está en alerta.
+
+                            El Instituto de Geofísica Estadunidense dio en principio al sismo una magnitud de 7.9, pero posteriormente la revisó al alza y la fijó en 8.2, que es excepcionalmente alta. Cualquier tipo de movimiento telúrico de magnitud superior a 7 grados es considerado susceptible de provocar grandes y cuantiosos daños materiales y numerosas víctimas.
+
+                            Aqui un enlace para poder escuchar el inicio del sismo: <a href="//ds.iris.edu/ds/nodes/dmc/tools/event/3337497">http://ds.iris.edu/ds/nodes/dmc/tools/event/3337497</a>
+                        </font>
+                    </td>
+                </tr>
+            </table>
+            <hr/>
+            <table width="1300" cellspacing="1" cellpadding="3" border="0" bgcolor="#3F3F3D">
+                <tr>
+                    <td><font color="#FFFFFF" face="arial, verdana, helvetica">
+                        <b>Sismo 2</b>
+                    </font></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#FFFFFF">
+                        <font face="arial, verdana, helvetica">
+                            El terremoto del océano Índico de 2004, conocido por la comunidad científica como el terremoto de Sumatra-Andamán, fue un terremoto submarino que ocurrió a las 00:58 UTC, (07:58 en el tiempo local de la región) del domingo 26 de diciembre de 2004 (21:58 hora costa del Pacífico Oeste del sábado 25 de diciembre de 2004), con epicentro en la costa de Banda Aceh, Indonesia.
+
+                            El terremoto ocasionó una serie de tsunamis devastadores a lo largo de las costas de la mayoría de los países que bordean el océano Índico, matando a una gran cantidad de personas a su paso e inundando a una gran cantidad de comunidades costeras a través de casi todo el sur y sudeste de Asia, incluyendo partes de Indonesia, Malasia, Sri Lanka, India y Tailandia. Las estimaciones iniciales habían determinado el número de muertes en más de 275 000, sin contar a los millares de personas desaparecidas.
+
+                            en verdad una muy lamentable cituacion.
+
+                            Aqui un enlace para poder escuchar el inicio del sismo: <a href="http://ds.iris.edu/ds/nodes/dmc/tools/event/1916079">http://ds.iris.edu/ds/nodes/dmc/tools/event/1916079</a>
+                        </font>
+                    </td>
+                </tr>
+            </table>
+
+
+
+
+        </section>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <section id="content4">
+            <table width="280" cellspacing="1" cellpadding="3" border="0" bgcolor="#3F3F3D">
+                <tr>
+                    <td><font color="#FFFFFF" face="arial, verdana, helvetica">
+                        <b>JAPON</b>
+                    </font></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#FFFFFF">
+                        <font face="arial, verdana, helvetica">
+                            https://earthquake.usgs.gov/earthquakes/eventpage/official20110311054624120_30#executive<br/>
+
+
+
+                        </font>
+                    </td>
+                </tr>
+            </table>
+            <table width="1300" cellspacing="1" cellpadding="3" border="0" bgcolor="#3F3F3D">
+                <tr>
+                    <td><font color="#FFFFFF" face="arial, verdana, helvetica">
+                        <b>SUMATRA</b>
+                    </font></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#FFFFFF">
+                        <font face="arial, verdana, helvetica">
+                            1.-https://www.emsc-csem.org/Earthquake/255/M8-1-OFFSHORE-CHIAPAS-MEXICO-on-September-8th-2017-at-04-49-UTC<br/>
+                        </font>
+                    </td>
+                </tr>
+            </table>
+
+        </section>
+    </div>
+</main>
+
+
+</body>
+</html>
